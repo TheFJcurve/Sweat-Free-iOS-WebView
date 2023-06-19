@@ -49,6 +49,7 @@
 		0E2567932A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweatFreeiOSWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweatFreeiOSWebViewUITests.swift; sourceTree = "<group>"; };
 		0E2567992A3D04B40068B0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED3F6042A411CD700EA619B /* SweatFreeiOSWebView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SweatFreeiOSWebView.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		0E2567742A3D04B20068B0A8 /* SweatFreeiOSWebView */ = {
 			isa = PBXGroup;
 			children = (
+				0ED3F6042A411CD700EA619B /* SweatFreeiOSWebView.entitlements */,
 				0E2567752A3D04B20068B0A8 /* AppDelegate.swift */,
 				0E2567772A3D04B20068B0A8 /* SceneDelegate.swift */,
 				0E2567792A3D04B20068B0A8 /* ViewController.swift */,
@@ -436,15 +438,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SweatFreeiOSWebView/SweatFreeiOSWebView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHDLYXSHLZ;
 				INFOPLIST_FILE = SweatFreeiOSWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,15 +461,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SweatFreeiOSWebView/SweatFreeiOSWebView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHDLYXSHLZ;
 				INFOPLIST_FILE = SweatFreeiOSWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -93,9 +93,13 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     @objc func goHome() {
-        //  Goes to the homeURL. Which, in this case, is https://www.sweatfree.co
-        let myRequest = URLRequest(url: homeURL!)
-        webView.load(myRequest)
+        //  Goes to the home URL of the current website.
+        guard let currentURL = webView.url else { return }
+        let homeURLString = currentURL.deletingLastPathComponent().absoluteString
+        if let homeURL = URL(string: homeURLString) {
+            let myRequest = URLRequest(url: homeURL)
+            webView.load(myRequest)
+        }
     }
     
     @objc func refreshWebView() {

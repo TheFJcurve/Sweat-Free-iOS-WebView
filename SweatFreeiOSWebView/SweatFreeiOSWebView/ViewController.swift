@@ -74,9 +74,26 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         //  people on whichever social media platform that the user has downloaded.
         guard let currentURL = webView.url else { return }
         
-        let activityViewController = UIActivityViewController(activityItems: [currentURL], applicationActivities: nil)
+        class openInSafari: UIActivity {
+            override var activityTitle: String? { "Open In Safari" }
+            override var activityType: UIActivity.ActivityType? { UIActivity.ActivityType("openInSafari") }
+            override var activityImage: UIImage? { UIImage(systemName: "safari") }
+            override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+                true
+            }
+            override class var activityCategory: UIActivity.Category { .action }
+            
+            override func perform() {
+                var homeURL = URL(string: "https://www.sweatfree.co")
+                UIApplication.shared.open(myRequest)
+            }
+        }
+        
+        let activityViewController = UIActivityViewController(activityItems: [currentURL], applicationActivities: [openInSafari()])
         present(activityViewController, animated: true, completion: nil)
     }
+    
+
     
     @objc func goBack() {
         //  Goes back whenever clicked, till it's possible.
@@ -94,12 +111,8 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     @objc func goHome() {
         //  Goes to the home URL of the current website.
-        guard let currentURL = webView.url else { return }
-        let homeURLString = currentURL.deletingLastPathComponent().absoluteString
-        if let homeURL = URL(string: homeURLString) {
-            let myRequest = URLRequest(url: homeURL)
-            webView.load(myRequest)
-        }
+        let myRequest = URLRequest(url: homeURL!)
+        webView.load(myRequest)
     }
     
     @objc func refreshWebView() {
@@ -110,4 +123,6 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         guard let currentURL = webView.url else { return }
         UIApplication.shared.open(currentURL)
     }
+    
+    
 }

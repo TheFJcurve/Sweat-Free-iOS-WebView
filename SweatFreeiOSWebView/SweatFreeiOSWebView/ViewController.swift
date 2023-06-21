@@ -62,55 +62,74 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(share))
         let forwardButton = UIBarButtonItem(image: UIImage(systemName: "arrow.forward"), style: .plain, target: self, action: #selector(goForward))
         let refreshButton = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(refreshWebView))
-        let openInBrowserButton = UIBarButtonItem(image: UIImage(systemName: "safari"), style: .plain, target: self, action: #selector(openInBrowser))
         
-        toolbar.items = [backButton, flexibleSpace, homeButton, flexibleSpace, shareButton, flexibleSpace, openInBrowserButton, flexibleSpace, refreshButton, flexibleSpace, forwardButton]
+        toolbar.items = [backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
     }
     
     // Setting up the functions
     
-    @objc func share() {
-        //  Takes the current url the user is on, and shows options of sharing that with
-        //  people on whichever social media platform that the user has downloaded.
-        guard let currentURL = webView.url else { return }
+    class OpenInSafari: UIActivity {
         
-        class openInSafari: UIActivity {
-            override var activityTitle: String? { "Open In Safari" }
-            override var activityType: UIActivity.ActivityType? { UIActivity.ActivityType("openInSafari") }
-            override var activityImage: UIImage? { UIImage(systemName: "safari") }
-            override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
-                true
-            }
-            override class var activityCategory: UIActivity.Category { .action }
-            
-            override func perform() {
-                var homeURL = URL(string: "https://www.sweatfree.co")
-                UIApplication.shared.open(myRequest)
-            }
+        //  Creates a new button for opening the url in safari inside the share function
+        //  Have to initlize webView inside the function since we need to use webView.url property
+        //  Main button activity is coded insdie perform().
+        
+        private let webView: WKWebView
+        
+        init(webView: WKWebView) {
+            self.webView = webView
+            super.init()
         }
         
-        let activityViewController = UIActivityViewController(activityItems: [currentURL], applicationActivities: [openInSafari()])
+        override var activityTitle: String? { "Open In Safari" }
+        override var activityType: UIActivity.ActivityType? { UIActivity.ActivityType("openInSafari") }
+        override var activityImage: UIImage? { UIImage(systemName: "safari") }
+        
+        override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+            true
+        }
+        
+        override func perform() {
+            if let currentURL = webView.url {
+                UIApplication.shared.open(currentURL)
+            }
+        }
+    }
+
+    @objc func share() {
+        
+        //  Creates a share popup that helps you to share to media etc.
+        //  Have added another custom button (openInSafari), the code for which is written in class OpenInSafari
+        
+        guard let currentURL = webView.url else { return }
+        
+        let openInSafariActivity = OpenInSafari(webView: webView)
+        let activityViewController = UIActivityViewController(activityItems: [currentURL], applicationActivities: [openInSafariActivity])
         present(activityViewController, animated: true, completion: nil)
     }
     
-
-    
     @objc func goBack() {
+        
         //  Goes back whenever clicked, till it's possible.
+        
         if webView.canGoBack {
             webView.goBack()
         }
     }
     
     @objc func goForward() {
+        
         //  Goes forward whenever clicked, till it's possible.
+        
         if webView.canGoForward {
             webView.goForward()
         }
     }
     
     @objc func goHome() {
+    
         //  Goes to the home URL of the current website.
+        
         let myRequest = URLRequest(url: homeURL!)
         webView.load(myRequest)
     }
@@ -118,11 +137,4 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     @objc func refreshWebView() {
         webView.reload()
     }
-    
-    @objc func openInBrowser() {
-        guard let currentURL = webView.url else { return }
-        UIApplication.shared.open(currentURL)
-    }
-    
-    
 }

@@ -12,9 +12,14 @@
 		0E25677A2A3D04B20068B0A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567792A3D04B20068B0A8 /* ViewController.swift */; };
 		0E25677D2A3D04B20068B0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E25677B2A3D04B20068B0A8 /* Main.storyboard */; };
 		0E25677F2A3D04B40068B0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E25677E2A3D04B40068B0A8 /* Assets.xcassets */; };
-		0E2567822A3D04B40068B0A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2567802A3D04B40068B0A8 /* LaunchScreen.storyboard */; };
 		0E25678D2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25678C2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift */; };
 		0E2567982A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */; };
+		BF7FDE432A51E364009F39A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE422A51E364009F39A1 /* GoogleService-Info.plist */; };
+		BF7FDE442A51E364009F39A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE422A51E364009F39A1 /* GoogleService-Info.plist */; };
+		BF7FDE452A51E364009F39A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE422A51E364009F39A1 /* GoogleService-Info.plist */; };
+		BF7FDE472A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
+		BF7FDE482A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
+		BF7FDE492A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +46,6 @@
 		0E2567792A3D04B20068B0A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E25677C2A3D04B20068B0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E25677E2A3D04B40068B0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0E2567812A3D04B40068B0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E2567832A3D04B40068B0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E2567882A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweatFreeiOSWebViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E25678C2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweatFreeiOSWebViewTests.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweatFreeiOSWebViewUITests.swift; sourceTree = "<group>"; };
 		0E2567992A3D04B40068B0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED3F6042A411CD700EA619B /* SweatFreeiOSWebView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SweatFreeiOSWebView.entitlements; sourceTree = "<group>"; };
+		BF7FDE422A51E364009F39A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = sweatFreeLaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +112,9 @@
 				0E2567792A3D04B20068B0A8 /* ViewController.swift */,
 				0E25677B2A3D04B20068B0A8 /* Main.storyboard */,
 				0E25677E2A3D04B40068B0A8 /* Assets.xcassets */,
-				0E2567802A3D04B40068B0A8 /* LaunchScreen.storyboard */,
+				BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */,
 				0E2567832A3D04B40068B0A8 /* Info.plist */,
+				BF7FDE422A51E364009F39A1 /* GoogleService-Info.plist */,
 			);
 			path = SweatFreeiOSWebView;
 			sourceTree = "<group>";
@@ -233,7 +240,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E2567822A3D04B40068B0A8 /* LaunchScreen.storyboard in Resources */,
+				BF7FDE472A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
+				BF7FDE432A51E364009F39A1 /* GoogleService-Info.plist in Resources */,
 				0E25677F2A3D04B40068B0A8 /* Assets.xcassets in Resources */,
 				0E25677D2A3D04B20068B0A8 /* Main.storyboard in Resources */,
 			);
@@ -243,6 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7FDE482A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
+				BF7FDE442A51E364009F39A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +260,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7FDE492A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
+				BF7FDE452A51E364009F39A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,14 +316,6 @@
 				0E25677C2A3D04B20068B0A8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0E2567802A3D04B40068B0A8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0E2567812A3D04B40068B0A8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -452,12 +456,12 @@
 				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2,6,7";
 			};
 			name = Debug;
 		};
@@ -480,12 +484,12 @@
 				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2,6,7";
 			};
 			name = Release;
 		};

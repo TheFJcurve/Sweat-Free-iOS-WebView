@@ -1,0 +1,6 @@
+framework module Pods_SweatFreeiOSWebView_SweatFreeiOSWebViewUITests {
+  umbrella header "Pods-SweatFreeiOSWebView-SweatFreeiOSWebViewUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

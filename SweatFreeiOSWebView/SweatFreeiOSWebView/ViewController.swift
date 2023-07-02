@@ -13,7 +13,8 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
     var webView: WKWebView!
     var toolbar: UIToolbar!
     var homeURL = URL(string: "https://www.sweatfree.co")
-    var isToolbarHidden = false
+    var toolbarThickness: CGFloat = 40
+    var padding: CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
         //  best to decrease the height of the webView. The height of the toolbar is 80px
         //  and hence the webView's height is decreased by 80
         
-        webView = WKWebView(frame: CGRect(x: 0, y: 90, width: view.bounds.width, height:view.bounds.height - 90))
+        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height:view.bounds.height - (toolbarThickness + 2 * padding)))
         webView.uiDelegate = self
         webView.navigationDelegate = self
         view.addSubview(webView)
@@ -43,56 +44,51 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
     }
     
     func setupToolbar() {
-            //  Setting up the toolbar dimensions (1st part) and the buttons (2nd part).
-            //  Note: .flexibleSpace has been created for aesthetic purpose, it just gives
-            //  some padding between the icons, and spreads them out evenly in the toolbar.
+        //  Setting up the toolbar dimensions (1st part) and the buttons (2nd part).
+        //  Note: .flexibleSpace has been created for aesthetic purpose, it just gives
+        //  some padding between the icons, and spreads them out evenly in the toolbar.
         
-        
-            //  Part 1: Dimensions
-            toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 90))
-            toolbar.barTintColor = UIColor(red: 61/255, green: 66/255, blue: 70/255, alpha: 1.0)
-            toolbar.tintColor = .white
-            view.addSubview(toolbar)
-    
-            //  Part 2: Buttons
-            
-            let backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(goBack))
-            let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-            let homeButton = UIBarButtonItem(image: UIImage(systemName: "house"), style: .plain, target: self, action: #selector(goHome))
-            let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(share))
-            let forwardButton = UIBarButtonItem(image: UIImage(systemName: "arrow.forward"), style: .plain, target: self, action: #selector(goForward))
-            let refreshButton = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(refreshWebView))
-            
-            toolbar.items = [backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
+        let toolbarHeight = toolbarThickness + padding
+        let toolbarY = view.bounds.height - toolbarHeight - padding // Adjusted the Y position
+        toolbar = UIToolbar(frame: CGRect(x: 0, y: toolbarY, width: view.bounds.width, height: toolbarHeight))
+        toolbar.barTintColor = UIColor(red: 61/255, green: 66/255, blue: 70/255, alpha: 1.0)
+        toolbar.tintColor = .white
+
+        view.addSubview(toolbar)
+
+        // Part 2: Buttons
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(goBack))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let homeButton = UIBarButtonItem(image: UIImage(systemName: "house"), style: .plain, target: self, action: #selector(goHome))
+        let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(share))
+        let forwardButton = UIBarButtonItem(image: UIImage(systemName: "arrow.forward"), style: .plain, target: self, action: #selector(goForward))
+        let refreshButton = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(refreshWebView))
+
+        toolbar.items = [backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
         }
+    
+    func handleToolbarVisibility(for url: URL?) {
+            guard let url = url else {
+                toolbar.isHidden = false
+                webView.frame.size.height = view.bounds.height - (toolbarThickness + 2 * padding)
+                return
+            }
+
+            if url.absoluteString.hasPrefix("https://www.sweatfree.co") {
+                toolbar.isHidden = true
+                webView.frame.size.height = view.bounds.height
+            } else {
+                toolbar.isHidden = false
+                webView.frame.size.height = view.bounds.height - (toolbarThickness + 2 * padding)
+            }
+        }
+
+    // Delegate method to track changes in the URL
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        handleToolbarVisibility(for: webView.url)
+    }
     
     // Setting up the functions
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let offsetY = scrollView.contentOffset.y
-            
-            if offsetY > 0 && !isToolbarHidden {
-                // Scroll down and toolbar is not hidden
-                hideToolbar()
-            } else if offsetY < 0 && isToolbarHidden {
-                // Scroll up and toolbar is hidden
-                showToolbar()
-            }
-        }
-    
-    func hideToolbar() {
-            isToolbarHidden = true
-            UIView.animate(withDuration: 0.3) {
-                self.toolbar.frame.origin.y = self.view.bounds.height
-            }
-        }
-        
-    func showToolbar() {
-            isToolbarHidden = false
-            UIView.animate(withDuration: 0.3) {
-                self.toolbar.frame.origin.y = self.view.bounds.height - 80
-            }
-        }
     
     class OpenInSafari: UIActivity {
         

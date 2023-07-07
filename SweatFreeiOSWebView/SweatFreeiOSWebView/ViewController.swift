@@ -67,26 +67,26 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
         toolbar.items = [backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
         }
     
-    func handleToolbarVisibility(for url: URL?) {
-            guard let url = url else {
-                toolbar.isHidden = false
-                webView.frame.size.height = view.bounds.height - (toolbarThickness + 2 * padding)
-                return
-            }
-
-            if url.absoluteString.hasPrefix("https://www.sweatfree.co") {
-                toolbar.isHidden = true
-                webView.frame.size.height = view.bounds.height
-            } else {
-                toolbar.isHidden = false
-                webView.frame.size.height = view.bounds.height - (toolbarThickness + 2 * padding)
-            }
-        }
-
-    // Delegate method to track changes in the URL
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        handleToolbarVisibility(for: webView.url)
-    }
+//    func handleToolbarVisibility(for url: URL?) {
+//            guard let url = url else {
+//                toolbar.isHidden = false
+//                webView.frame.size.height = view.bounds.height - (toolbarThickness + 2 * padding)
+//                return
+//            }
+//
+//            if url.absoluteString.hasPrefix("https://www.sweatfree.co") {
+//                toolbar.isHidden = true
+//                webView.frame.size.height = view.bounds.height
+//            } else {
+//                toolbar.isHidden = false
+//                webView.frame.size.height = view.bounds.height - (toolbarThickness + 2 * padding)
+//            }
+//        }
+//
+//    // Delegate method to track changes in the URL
+//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//        handleToolbarVisibility(for: webView.url)
+//    }
     
     // Setting up the functions
     

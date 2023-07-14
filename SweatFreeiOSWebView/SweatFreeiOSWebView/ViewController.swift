@@ -53,6 +53,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
         toolbar = UIToolbar(frame: CGRect(x: 0, y: toolbarY, width: view.bounds.width, height: toolbarHeight))
         toolbar.barTintColor = UIColor(red: 61/255, green: 66/255, blue: 70/255, alpha: 1.0)
         toolbar.tintColor = .white
+        toolbar.backgroundColor = UIColor(red: 61/255, green: 66/255, blue: 70/255, alpha: 1.0)
 
         view.addSubview(toolbar)
 

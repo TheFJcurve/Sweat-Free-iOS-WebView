@@ -125,10 +125,16 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
         //  Have added another custom button (openInSafari), the code for which is written in class OpenInSafari
         
         guard let currentURL = webView.url else { return }
-        
+
         let openInSafariActivity = OpenInSafari(webView: webView)
         let activityViewController = UIActivityViewController(activityItems: [currentURL], applicationActivities: [openInSafariActivity])
+
+        // Set the source view for the popover presentation
+        activityViewController.popoverPresentationController?.sourceView = toolbar
+
         present(activityViewController, animated: true, completion: nil)
+
+
     }
     
     @objc func goBack() {

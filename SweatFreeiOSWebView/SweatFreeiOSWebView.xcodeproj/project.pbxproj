@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09D7BE2E2A975141009ACC2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D7BE2D2A975141009ACC2D /* GoogleService-Info.plist */; };
+		09D7BE2F2A975141009ACC2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D7BE2D2A975141009ACC2D /* GoogleService-Info.plist */; };
+		09D7BE302A975141009ACC2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D7BE2D2A975141009ACC2D /* GoogleService-Info.plist */; };
 		0E2567762A3D04B20068B0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567752A3D04B20068B0A8 /* AppDelegate.swift */; };
 		0E2567782A3D04B20068B0A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567772A3D04B20068B0A8 /* SceneDelegate.swift */; };
 		0E25677A2A3D04B20068B0A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567792A3D04B20068B0A8 /* ViewController.swift */; };
@@ -14,9 +17,6 @@
 		0E25677F2A3D04B40068B0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E25677E2A3D04B40068B0A8 /* Assets.xcassets */; };
 		0E25678D2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25678C2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift */; };
 		0E2567982A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */; };
-		BF3A113B2A6F39D700DA2355 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A113A2A6F39D700DA2355 /* GoogleService-Info.plist */; };
-		BF3A113C2A6F39D700DA2355 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A113A2A6F39D700DA2355 /* GoogleService-Info.plist */; };
-		BF3A113D2A6F39D700DA2355 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A113A2A6F39D700DA2355 /* GoogleService-Info.plist */; };
 		BF7FDE472A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
 		BF7FDE482A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
 		BF7FDE492A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D7BE2D2A975141009ACC2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E2567722A3D04B20068B0A8 /* Sweat Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sweat Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E2567752A3D04B20068B0A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E2567772A3D04B20068B0A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweatFreeiOSWebViewUITests.swift; sourceTree = "<group>"; };
 		0E2567992A3D04B40068B0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED3F6042A411CD700EA619B /* SweatFreeiOSWebView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SweatFreeiOSWebView.entitlements; sourceTree = "<group>"; };
-		BF3A113A2A6F39D700DA2355 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = sweatFreeLaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 				0E25677E2A3D04B40068B0A8 /* Assets.xcassets */,
 				BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */,
 				0E2567832A3D04B40068B0A8 /* Info.plist */,
-				BF3A113A2A6F39D700DA2355 /* GoogleService-Info.plist */,
+				09D7BE2D2A975141009ACC2D /* GoogleService-Info.plist */,
 			);
 			path = SweatFreeiOSWebView;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FDE472A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
-				BF3A113B2A6F39D700DA2355 /* GoogleService-Info.plist in Resources */,
+				09D7BE2E2A975141009ACC2D /* GoogleService-Info.plist in Resources */,
 				0E25677F2A3D04B40068B0A8 /* Assets.xcassets in Resources */,
 				0E25677D2A3D04B20068B0A8 /* Main.storyboard in Resources */,
 			);
@@ -264,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FDE482A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
-				BF3A113C2A6F39D700DA2355 /* GoogleService-Info.plist in Resources */,
+				09D7BE2F2A975141009ACC2D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FDE492A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
-				BF3A113D2A6F39D700DA2355 /* GoogleService-Info.plist in Resources */,
+				09D7BE302A975141009ACC2D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SweatFreeiOSWebView/SweatFreeiOSWebView.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHDLYXSHLZ;
 				INFOPLIST_FILE = SweatFreeiOSWebView/Info.plist;
@@ -468,8 +469,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.01;
-				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebView;
+				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebViewCRSar;
 				PRODUCT_NAME = "Sweat Free";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -486,6 +488,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SweatFreeiOSWebView/SweatFreeiOSWebView.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHDLYXSHLZ;
 				INFOPLIST_FILE = SweatFreeiOSWebView/Info.plist;
@@ -496,8 +499,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.01;
-				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebView;
+				PRODUCT_BUNDLE_IDENTIFIER = SFA.SweatFreeiOSWebViewCRSar;
 				PRODUCT_NAME = "Sweat Free";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;

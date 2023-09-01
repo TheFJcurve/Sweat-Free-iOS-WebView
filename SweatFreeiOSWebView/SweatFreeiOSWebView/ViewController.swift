@@ -12,9 +12,9 @@ import WebKit
 class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate {
     var webView: WKWebView!
     var toolbar: UIToolbar!
-    var homeURL = URL(string: "https://www.sweatfree.co")
+    var homeURL = URL(string: "https://www.sweatfree.co") //  Default home location. Change this if replicating project.
     var toolbarThickness: CGFloat = 40
-    var padding: CGFloat = 20
+    var padding: CGFloat = 20 //  Distance of buttons from button of the toolbar
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +44,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
     }
     
     func setupToolbar() {
+        
         //  Setting up the toolbar dimensions (1st part) and the buttons (2nd part).
         //  Note: .flexibleSpace has been created for aesthetic purpose, it just gives
         //  some padding between the icons, and spreads them out evenly in the toolbar.
@@ -69,6 +70,8 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
 
         toolbar.items = [menuButton, flexibleSpace, backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
         }
+    
+    //  The option to make the toolbar disappear on scrolling.
     
 //    func handleToolbarVisibility(for url: URL?) {
 //            guard let url = url else {
@@ -138,6 +141,10 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
     }
     
     @objc func showMenu() {
+        
+        //  Creates a popup which allows you to select an activity, this can be going to your account, showing your
+        //  orders, etc.
+        
         let alertController = UIAlertController(title: "Choose an Activity", message: nil, preferredStyle: .actionSheet)
         
         let accountAction = UIAlertAction(title: "Your Account", style: .default) { [weak self] _ in

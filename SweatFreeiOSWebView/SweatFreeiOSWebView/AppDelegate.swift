@@ -5,6 +5,10 @@
 //  Created by Sargun Singh Bhatti on 2023-06-16.
 //
 
+//  Coded to receive and send firebase notifications. No need to touch anything in this file if replicating
+//  the same code. Just download your project's GoogleService-Info and replace it in the files. That will
+//  make the notification work just fine. 
+
 import UIKit
 import FirebaseCore
 import FirebaseMessaging

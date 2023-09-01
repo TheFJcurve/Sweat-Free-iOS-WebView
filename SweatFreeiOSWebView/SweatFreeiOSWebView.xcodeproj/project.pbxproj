@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,14 +14,14 @@
 		0E25677F2A3D04B40068B0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E25677E2A3D04B40068B0A8 /* Assets.xcassets */; };
 		0E25678D2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25678C2A3D04B40068B0A8 /* SweatFreeiOSWebViewTests.swift */; };
 		0E2567982A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */; };
+		BF753D332AA2386700EC0047 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF753D322AA2386700EC0047 /* GoogleService-Info.plist */; };
+		BF753D342AA2386700EC0047 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF753D322AA2386700EC0047 /* GoogleService-Info.plist */; };
+		BF753D352AA2386700EC0047 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF753D322AA2386700EC0047 /* GoogleService-Info.plist */; };
 		BF7FDE472A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
 		BF7FDE482A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
 		BF7FDE492A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */; };
 		BF7FDE4C2A51F10C009F39A1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BF7FDE4B2A51F10C009F39A1 /* FirebaseAnalytics */; };
 		BF7FDE4E2A51F10C009F39A1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BF7FDE4D2A51F10C009F39A1 /* FirebaseMessaging */; };
-		BF98A47A2A9860EC00F890B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF98A4792A9860EC00F890B4 /* GoogleService-Info.plist */; };
-		BF98A47B2A9860EC00F890B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF98A4792A9860EC00F890B4 /* GoogleService-Info.plist */; };
-		BF98A47C2A9860EC00F890B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF98A4792A9860EC00F890B4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		0E2567972A3D04B40068B0A8 /* SweatFreeiOSWebViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweatFreeiOSWebViewUITests.swift; sourceTree = "<group>"; };
 		0E2567992A3D04B40068B0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED3F6042A411CD700EA619B /* SweatFreeiOSWebView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SweatFreeiOSWebView.entitlements; sourceTree = "<group>"; };
+		BF753D322AA2386700EC0047 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = sweatFreeLaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF98A4792A9860EC00F890B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 				0E25677E2A3D04B40068B0A8 /* Assets.xcassets */,
 				BF7FDE462A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard */,
 				0E2567832A3D04B40068B0A8 /* Info.plist */,
-				BF98A4792A9860EC00F890B4 /* GoogleService-Info.plist */,
+				BF753D322AA2386700EC0047 /* GoogleService-Info.plist */,
 			);
 			path = SweatFreeiOSWebView;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FDE472A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
-				BF98A47A2A9860EC00F890B4 /* GoogleService-Info.plist in Resources */,
+				BF753D332AA2386700EC0047 /* GoogleService-Info.plist in Resources */,
 				0E25677F2A3D04B40068B0A8 /* Assets.xcassets in Resources */,
 				0E25677D2A3D04B20068B0A8 /* Main.storyboard in Resources */,
 			);
@@ -264,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FDE482A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
-				BF98A47B2A9860EC00F890B4 /* GoogleService-Info.plist in Resources */,
+				BF753D342AA2386700EC0047 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7FDE492A51E38D009F39A1 /* sweatFreeLaunchScreen.storyboard in Resources */,
-				BF98A47C2A9860EC00F890B4 /* GoogleService-Info.plist in Resources */,
+				BF753D352AA2386700EC0047 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

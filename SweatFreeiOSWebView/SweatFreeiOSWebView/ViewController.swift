@@ -64,8 +64,10 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
         let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(share))
         let forwardButton = UIBarButtonItem(image: UIImage(systemName: "arrow.forward"), style: .plain, target: self, action: #selector(goForward))
         let refreshButton = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(refreshWebView))
+        let menuButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .plain, target: self, action: #selector(showMenu))
+            
 
-        toolbar.items = [backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
+        toolbar.items = [menuButton, flexibleSpace, backButton, flexibleSpace, homeButton, flexibleSpace, refreshButton, flexibleSpace, shareButton, flexibleSpace, forwardButton]
         }
     
 //    func handleToolbarVisibility(for url: URL?) {
@@ -133,9 +135,42 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
         activityViewController.popoverPresentationController?.sourceView = toolbar
 
         present(activityViewController, animated: true, completion: nil)
-
-
     }
+    
+    @objc func showMenu() {
+        let alertController = UIAlertController(title: "Choose an Activity", message: nil, preferredStyle: .actionSheet)
+        
+        let accountAction = UIAlertAction(title: "Your Account", style: .default) { [weak self] _ in
+            // Change the WKWebView to the 'https://www.sweatfree.co/account' URL
+            if let url = URL(string: "https://www.sweatfree.co/account") {
+                let request = URLRequest(url: url)
+                self?.webView.load(request)
+            }
+        }
+        
+        let cartAction = UIAlertAction(title: "Cart", style: .default) { [weak self] _ in
+            // Change the WKWebView to the 'https://www.sweatfree.co/cart' URL
+            if let url = URL(string: "https://www.sweatfree.co/cart") {
+                let request = URLRequest(url: url)
+                self?.webView.load(request)
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(accountAction)
+        alertController.addAction(cartAction)
+        alertController.addAction(cancelAction)
+        
+        // For iPad support
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = toolbar
+            popoverController.sourceRect = toolbar.bounds
+        }
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
     
     @objc func goBack() {
         

@@ -163,10 +163,28 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UISc
             }
         }
         
+        let aboutAction = UIAlertAction(title: "About", style: .default) { [weak self] _ in
+            // Change the WKWebView to the 'https://www.sweatfree.co/pages/about-sweat-free-apparel' URL
+            if let url = URL(string: "https://www.sweatfree.co/pages/about-sweat-free-apparel") {
+                let request = URLRequest(url: url)
+                self?.webView.load(request)
+            }
+        }
+        
+        let contactAction = UIAlertAction(title: "Contact", style: .default) { [weak self] _ in
+            // Change the WKWebView to the 'https://www.sweatfree.co/pages/contact-us' URL
+            if let url = URL(string: "https://www.sweatfree.co/pages/contact-us") {
+                let request = URLRequest(url: url)
+                self?.webView.load(request)
+            }
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         alertController.addAction(accountAction)
         alertController.addAction(cartAction)
+        alertController.addAction(aboutAction)
+        alertController.addAction(contactAction)
         alertController.addAction(cancelAction)
         
         // For iPad support
